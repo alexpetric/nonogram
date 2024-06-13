@@ -22,7 +22,7 @@ headerH1.addEventListener('click', (e) => {
 });
 
 /* LOADING PROFILE PICTURE */
-function loadProfilePic() {
+export function loadProfilePic() {
     // Get the Base64 string from localStorage
     const profilePicBase64 = localStorage.getItem('profilePic');
 

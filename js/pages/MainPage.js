@@ -1,4 +1,5 @@
 import Page from "./Page.js";
+import {loadProfilePic} from "../script.js";
 
 export default class MainPage extends Page {
     constructor(settings) {
@@ -71,8 +72,11 @@ export default class MainPage extends Page {
                 // Save the level to localStorage
                 localStorage.setItem('level', 1);
 
+                // Render profile picture
+                loadProfilePic();
+
                 // Re-render the MainPage
-                this.showPage();
+                location.reload();
             });
         }
         // If there is a start game button on the page, add an event listener for the button click

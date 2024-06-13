@@ -288,9 +288,6 @@ input[type=checkbox] {
     align-items: center;
     width: 100%;
     max-width: 100%;
-    margin: 20px;
-    padding: 20px;
-    border: 2px solid green;
 }
 
 #user-info-form form input {
@@ -323,7 +320,6 @@ input[type=checkbox] {
     font-size: 8pt;
     color: gray;
     margin-top: 5px;
-    margin-bottom: 10px;
 }
 
 #drop-zone {
