@@ -9,7 +9,8 @@ export default class GamePage extends Page {
         this.clueOffset = 15;
         this.clueFontSize = 11;
         this.level = Number(localStorage.getItem('level')) ?? 1;
-        this.solution = getNonogram(this.level);
+        this.solution = getNonogram(this.level) ?? getNonogram(1);
+        this.nonogram = this.#generateNonogramArray();
         this.fanfareSound = new Audio('../../media/fanfare.mp3');
     }
 
@@ -30,7 +31,6 @@ export default class GamePage extends Page {
         }
         this.ctx = this.canvas.getContext('2d');
         this.gridStart = Math.round(this.canvas.width / 2 - 10 * this.tileSize / 2);
-        this.nonogram = this.#generateNonogramArray();
         this.#startGame();
     }
 
